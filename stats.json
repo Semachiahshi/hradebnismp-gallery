@@ -1,1 +1,20 @@
-
+[
+  {
+    "username": "Petr",
+    "diamonds": 152,
+    "playtime": "42h",
+    "online": true
+  },
+  {
+    "username": "Martin",
+    "diamonds": 89,
+    "playtime": "28h",
+    "online": false
+  },
+  {
+    "username": "Semachiah",
+    "diamonds": 210,
+    "playtime": "56h",
+    "online": true
+  }
+]
