@@ -1,0 +1,17 @@
+name: Update Stats
+on:
+  repository_dispatch:
+    types: [update_stats]
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update JSON
+        run: |
+          echo '${{ github.event.client_payload.data }}' > stats.json
+          git config user.name "Stats Bot"
+          git config user.email "bot@hradebnismp.cz"
+          git add stats.json
+          git commit -m "Automatická aktualizace statistik"
+          git push
